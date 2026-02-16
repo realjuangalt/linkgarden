@@ -206,9 +206,15 @@ a:hover {
 .garden-footer {
   margin-top: 2.5rem;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.garden-footer .edit-link {
+.garden-footer .edit-link,
+.garden-footer .github-link {
   font-size: 0.85rem;
   color: var(--text-muted);
   padding: 0.6rem 1.1rem;
@@ -218,13 +224,23 @@ a:hover {
   border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 0.5rem;
-  transition: color 0.2s, border-color 0.2s;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.garden-footer .github-link .github-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.garden-footer .edit-link,
+.garden-footer .github-link {
   -webkit-tap-highlight-color: transparent;
 }
 
-.garden-footer .edit-link:hover {
+.garden-footer .edit-link:hover,
+.garden-footer .github-link:hover {
   color: var(--gold);
   border-color: var(--orange);
   box-shadow: 0 0 12px var(--orange-soft);
