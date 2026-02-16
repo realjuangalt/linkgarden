@@ -28,8 +28,122 @@
 
   /** Static emoji set for the picker (no external lib). */
   const EMOJI_LIST = [
-    '😀','😃','😄','😁','😅','😂','🤣','🙂','🙃','😉','😊','😇','🥰','😍','🤩','😘','😋','😜','🤪','😎','🤔','🙄','😏','😬','🤥','😌','😶','🙂','😐','😑','😯','😦','😧','😮','😲','😳','🥺','😢','😭','😤','😠','😡','🤬','😈','💀','💩','👍','👎','👏','🙌','👋','🤝','🙏','✌','🤞','🤟','🤘','👈','👉','👆','👇','❤','🧡','💛','💚','💙','💜','🖤','🤍','💔','💕','💖','💗','💘','⭐','✨','🔥','💯','🎯','🏆','📌','🎨','🎬','📰','🎵','🎶','🎙','🎤','📱','💻','🖥','📷','📸','🔗','📎','📖','📝','✏','🔒','🔑','💡','📢','🔔','🌱','🌿','🍀','🌸','🌺','🌻','🌼','🍁','🐸','➡','⬅','⬆','⬇','↗','↘','✔','✖','⚡','🔔','📣','💬','🗯','💭','🕐','📅','🗓','✅','🆗','🆒','🆕','🆓','🔝','🔙','🔛','🔜','🔃','🔄','⏩','⏪','🔀','🔁','🔂','💲','🅱','🅾','🅿','🈹','🈚','🈶','🈯','🈷','🈸','🈺','🉐','🉑','©','®','™','⚙','🔧','🛠','🔩','⛏','🪛','📐','📏','✂','🗃','🗄','🗑','🔒','🔓','🔏','🔐','🔑','🗝','🔨','🪓','⛏','🛡','🔫','🏹','🪃','🛡','🔮','🪄','📿','🧿','💈','⚗','🔭','🔬','🕳','🩻','🩹','🩺','💊','💉','🩸','🧬','🦠','🧫','🧪','🌡','🧹','🪠','🧺','🧻','🚽','🚰','🚿','🛁','🛀','🧼','🪥','🪒','🧽','🪣','🧴','🛎','🔑','🗝','🚪','🪑','🛋','🛏','🛌','🧸','🪆','🖼','🪞','🪟','🛍','🛒','🎁','🎈','🎏','🎀','🪄','🪅','🎊','🎉','🎎','🏮','🎐','🧧','✉','📩','📨','📧','💌','📥','📤','📦','🪤','📪','📫','📬','📭','📮','📯','📜','📃','📄','📑','🧾','📊','📈','📉','🗒','🗓','📆','📅','🗑','📇','🗃','🗳','🗄','📋','📁','📂','🗂','🗞','📰','📓','📔','📒','📕','📗','📘','📙','📚','📖','🔖','🧷','🔗','📎','🖇','📐','📏','🧮','📌','📍','✂','🖊','🖋','✒','🖌','🖍','📝','💼','🗄','📁','📂','🗂','🗃','🗄','🗳','✏','🔏','🔒','🔓'
+    '😀','😃','😄','😁','😅','😂','🤣','🙂','🙃','😉','😊','😇','🥰','😍','🤩','😘','😋','😜','🤪','😎','🤔','🙄','😏','😬','🤥','😌','😶','🙂','😐','😑','😯','😦','😧','😮','😲','😳','🥺','😢','😭','😤','😠','😡','🤬','😈','💀','💩','👍','👎','👏','🙌','👋','🤝','🙏','✌','🤞','🤟','🤘','👈','👉','👆','👇','❤','🧡','💛','💚','💙','💜','🖤','🤍','💔','💕','💖','💗','💘','⭐','✨','🔥','💯','🎯','🏆','📌','🎨','🎬','📰','🎵','🎶','🎙','🎤','📱','💻','🖥','📷','📸','🔗','📎','📖','📝','✏','🔒','🔑','💡','📢','🔔','🌱','🌿','🍀','🌸','🌺','🌻','🌼','🍁','🐸','➡','⬅','⬆','⬇','↗','↘','✔','✖','⚡','🔔','📣','💬','🗯','💭','🕐','📅','🗓','✅','🆗','🆒','🆕','🆓','🔝','🔙','🔛','🔜','🔃','🔄','⏩','⏪','🔀','🔁','🔂','💲','🅱','🅾','🅿','🈹','🈚','🈶','🈯','🈷','🈸','🈺','🉐','🉑','©','®','™','⚙','🔧','🛠','🔩','⛏','🪛','📐','📏','✂','🗃','🗄','🗑','🔒','🔓','🔏','🔐','🔑','🗝','🔨','🪓','⛏','🛡','🔫','🏹','🪃','🛡','🔮','🪄','📿','🧿','💈','⚗','🔭','🔬','🕳','🩻','🩹','🩺','💊','💉','🩸','🧬','🦠','🧫','🧪','🌡','🧹','🪠','🧺','🧻','🚽','🚰','🚿','🛁','🛀','🧼','🪥','🪒','🧽','🪣','🧴','🛎','🔑','🗝','🚪','🪑','🛋','🛏','🛌','🧸','🪆','🖼','🪞','🪟','🛍','🛒','🎁','🎈','🎏','🎀','🪄','🪅','🎊','🎉','🎎','🏮','🎐','🧧','✉','📩','📨','📧','💌','📥','📤','📦','🪤','📪','📫','📬','📭','📮','📯','📜','📃','📄','📑','🧾','📊','📈','📉','🗒','🗓','📆','📅','🗑','📇','🗃','🗳','🗄','📋','📁','📂','🗂','🗞','📰','📓','📔','📒','📕','📗','📘','📙','📚','📖','🔖','🧷','🔗','📎','🖇','📐','📏','🧮','📌','📍','✂','🖊','🖋','✒','🖌','🖍','📝','💼','🗄','📁','📂','🗂','🗃','🗄','🗳','✏','🔏','🔒','🔓',
+    '₿','💰','🪙','💎','🚀','🌙','🐂','🐻','🧱','💳','🏦','💵','💴','💶','💷','🦀','🏠','🟠','🧡',
+    '🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘','🌛','🌜','🌟','🪐','☀️','🌞','🌍','👽','👾','🤖','🛸','🌌','🔭'
   ];
+
+  /** Keywords for emoji search (partial; unlisted emojis match by character only). */
+  const EMOJI_KEYWORDS = {
+    '₿': 'bitcoin btc satoshi orange coin',
+    '💰': 'money bag cash rich',
+    '🪙': 'coin gold money',
+    '💎': 'diamond gem store of value',
+    '🚀': 'rocket moon mooning to the moon launch',
+    '🌙': 'moon mooning crescent',
+    '🌑': 'moon dark new moon',
+    '🌒': 'moon waxing crescent',
+    '🌓': 'moon first quarter',
+    '🌔': 'moon waxing gibbous',
+    '🌕': 'moon full moon',
+    '🌖': 'moon waning gibbous',
+    '🌗': 'moon last quarter',
+    '🌘': 'moon waning crescent',
+    '🌛': 'moon crescent',
+    '🌜': 'moon crescent',
+    '🌟': 'star glow sparkle',
+    '🪐': 'saturn planet space',
+    '☀️': 'sun',
+    '🌞': 'sun sunny',
+    '🌍': 'earth world globe',
+    '👽': 'alien space extraterrestrial',
+    '👾': 'alien space invader pixel game',
+    '🤖': 'alien robot bot sci-fi',
+    '🛸': 'ufo spaceship flying saucer alien',
+    '🌌': 'galaxy space milky way',
+    '🔭': 'telescope space',
+    '⭐': 'star',
+    '🐂': 'bull bull run',
+    '🐻': 'bear bear market',
+    '🧱': 'brick block blockchain',
+    '💳': 'card credit',
+    '🏦': 'bank',
+    '💵': 'dollar money',
+    '💴': 'yen money',
+    '💶': 'euro money',
+    '💷': 'pound money',
+    '🦀': 'crab sideways',
+    '⛏': 'pick mining',
+    '🔐': 'lock security keys',
+    '📈': 'chart up green',
+    '📉': 'chart down red',
+    '⚡': 'lightning bolt fast',
+    '🎯': 'target',
+    '🔑': 'key keys your keys',
+    '🏠': 'house home',
+    '🟠': 'orange bitcoin',
+    '🧡': 'orange',
+    '😀': 'smile happy',
+    '😂': 'laugh',
+    '🔥': 'fire hot',
+    '❤': 'heart love',
+    '👍': 'thumbs up',
+    '✨': 'sparkle',
+    '🐸': 'frog pepe'
+  };
+
+  /** Builds the dropdown DOM for the emoji picker (search + grid). Calls onSelect(emoji) when one is chosen. */
+  function createEmojiPickerDropdown(onSelect) {
+    var picker = document.createElement('div');
+    picker.className = 'emoji-picker emoji-picker-asset';
+    picker.setAttribute('role', 'listbox');
+    picker.setAttribute('aria-label', 'Choose emoji as image');
+
+    var searchWrap = document.createElement('div');
+    searchWrap.className = 'emoji-picker-search-wrap';
+    var searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.className = 'emoji-picker-search';
+    searchInput.placeholder = 'Search emojis…';
+    searchInput.setAttribute('aria-label', 'Search emojis');
+    searchWrap.appendChild(searchInput);
+    picker.appendChild(searchWrap);
+
+    var grid = document.createElement('div');
+    grid.className = 'emoji-picker-grid';
+    var q = '';
+    function filterVisible() {
+      q = (searchInput.value || '').trim().toLowerCase();
+      var buttons = grid.querySelectorAll('.emoji-picker-item');
+      buttons.forEach(function (btn) {
+        var emoji = btn.getAttribute('data-emoji');
+        var keywords = (btn.getAttribute('data-keywords') || '').toLowerCase();
+        var show = !q || emoji === searchInput.value.trim() || (keywords && keywords.indexOf(q) !== -1);
+        btn.style.display = show ? '' : 'none';
+      });
+    }
+    searchInput.addEventListener('input', filterVisible);
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') searchInput.blur();
+    });
+
+    EMOJI_LIST.forEach(function (emoji) {
+      var span = document.createElement('button');
+      span.type = 'button';
+      span.className = 'emoji-picker-item';
+      span.textContent = emoji;
+      span.setAttribute('role', 'option');
+      span.setAttribute('data-emoji', emoji);
+      var kw = EMOJI_KEYWORDS[emoji];
+      if (kw) span.setAttribute('data-keywords', kw);
+      span.addEventListener('click', function () {
+        onSelect(emoji);
+      });
+      grid.appendChild(span);
+    });
+    picker.appendChild(grid);
+    return picker;
+  }
 
   let state = JSON.parse(JSON.stringify(defaultData));
   let addingMode = null;
@@ -197,33 +311,25 @@
       thumbEmojiBtn.className = 'btn btn-secondary btn-emoji-asset';
       thumbEmojiBtn.title = 'Pick emoji as image asset';
       thumbEmojiBtn.textContent = item.thumbnailEmoji ? item.thumbnailEmoji : '😀';
-      var thumbEmojiPicker = document.createElement('div');
-      thumbEmojiPicker.className = 'emoji-picker emoji-picker-asset';
-      thumbEmojiPicker.setAttribute('role', 'listbox');
-      thumbEmojiPicker.setAttribute('aria-label', 'Choose emoji as image');
       var thumbEmojiInput = document.createElement('input');
       thumbEmojiInput.type = 'hidden';
       thumbEmojiInput.className = 'thumb-emoji-input';
       thumbEmojiInput.value = item.thumbnailEmoji || '';
-      EMOJI_LIST.forEach(function (emoji) {
-        var span = document.createElement('button');
-        span.type = 'button';
-        span.className = 'emoji-picker-item';
-        span.textContent = emoji;
-        span.setAttribute('role', 'option');
-        span.addEventListener('click', function () {
-          thumbEmojiInput.value = emoji;
-          thumbEmojiDisplay.textContent = emoji;
-          thumbEmojiBtn.textContent = emoji;
-          thumbEmojiClear.style.display = 'inline-flex';
-          thumbInput.value = '';
-          thumbEmojiPicker.classList.remove('is-open');
-          pushEditToState(form, item);
-        });
-        thumbEmojiPicker.appendChild(span);
+      var thumbEmojiPicker = createEmojiPickerDropdown(function (emoji) {
+        thumbEmojiInput.value = emoji;
+        thumbEmojiDisplay.textContent = emoji;
+        thumbEmojiBtn.textContent = emoji;
+        thumbEmojiClear.style.display = 'inline-flex';
+        thumbInput.value = '';
+        thumbEmojiPicker.classList.remove('is-open');
+        pushEditToState(form, item);
       });
       thumbEmojiBtn.addEventListener('click', function () {
         thumbEmojiPicker.classList.toggle('is-open');
+        if (thumbEmojiPicker.classList.contains('is-open')) {
+          var searchEl = thumbEmojiPicker.querySelector('.emoji-picker-search');
+          if (searchEl) { searchEl.value = ''; searchEl.dispatchEvent(new Event('input')); searchEl.focus(); }
+        }
       });
       document.addEventListener('click', function closeAssetPicker(e) {
         if (thumbEmojiPicker.classList.contains('is-open') && !thumbEmojiPicker.contains(e.target) && e.target !== thumbEmojiBtn) {
@@ -285,33 +391,25 @@
       thumbEmojiBtn.className = 'btn btn-secondary btn-emoji-asset';
       thumbEmojiBtn.title = 'Pick emoji as image asset';
       thumbEmojiBtn.textContent = item.thumbnailEmoji ? item.thumbnailEmoji : '😀';
-      var thumbEmojiPicker = document.createElement('div');
-      thumbEmojiPicker.className = 'emoji-picker emoji-picker-asset';
-      thumbEmojiPicker.setAttribute('role', 'listbox');
-      thumbEmojiPicker.setAttribute('aria-label', 'Choose emoji as image');
       var thumbEmojiInput = document.createElement('input');
       thumbEmojiInput.type = 'hidden';
       thumbEmojiInput.className = 'thumb-emoji-input';
       thumbEmojiInput.value = item.thumbnailEmoji || '';
-      EMOJI_LIST.forEach(function (emoji) {
-        var span = document.createElement('button');
-        span.type = 'button';
-        span.className = 'emoji-picker-item';
-        span.textContent = emoji;
-        span.setAttribute('role', 'option');
-        span.addEventListener('click', function () {
-          thumbEmojiInput.value = emoji;
-          thumbEmojiDisplay.textContent = emoji;
-          thumbEmojiBtn.textContent = emoji;
-          thumbEmojiClear.style.display = 'inline-flex';
-          thumbInput.value = '';
-          thumbEmojiPicker.classList.remove('is-open');
-          pushEditToState(form, item);
-        });
-        thumbEmojiPicker.appendChild(span);
+      var thumbEmojiPicker = createEmojiPickerDropdown(function (emoji) {
+        thumbEmojiInput.value = emoji;
+        thumbEmojiDisplay.textContent = emoji;
+        thumbEmojiBtn.textContent = emoji;
+        thumbEmojiClear.style.display = 'inline-flex';
+        thumbInput.value = '';
+        thumbEmojiPicker.classList.remove('is-open');
+        pushEditToState(form, item);
       });
       thumbEmojiBtn.addEventListener('click', function () {
         thumbEmojiPicker.classList.toggle('is-open');
+        if (thumbEmojiPicker.classList.contains('is-open')) {
+          var searchEl = thumbEmojiPicker.querySelector('.emoji-picker-search');
+          if (searchEl) { searchEl.value = ''; searchEl.dispatchEvent(new Event('input')); searchEl.focus(); }
+        }
       });
       document.addEventListener('click', function closeAssetPicker(e) {
         if (thumbEmojiPicker.classList.contains('is-open') && !thumbEmojiPicker.contains(e.target) && e.target !== thumbEmojiBtn) {
@@ -424,31 +522,23 @@
       thumbEmojiBtnNew.className = 'btn btn-secondary btn-emoji-asset';
       thumbEmojiBtnNew.title = 'Pick emoji as image asset';
       thumbEmojiBtnNew.textContent = '😀';
-      var thumbEmojiPickerNew = document.createElement('div');
-      thumbEmojiPickerNew.className = 'emoji-picker emoji-picker-asset';
-      thumbEmojiPickerNew.setAttribute('role', 'listbox');
-      thumbEmojiPickerNew.setAttribute('aria-label', 'Choose emoji as image');
       thumbEmojiInputNew = document.createElement('input');
       thumbEmojiInputNew.type = 'hidden';
       thumbEmojiInputNew.className = 'thumb-emoji-input';
-      EMOJI_LIST.forEach(function (emoji) {
-        var span = document.createElement('button');
-        span.type = 'button';
-        span.className = 'emoji-picker-item';
-        span.textContent = emoji;
-        span.setAttribute('role', 'option');
-        span.addEventListener('click', function () {
-          thumbEmojiInputNew.value = emoji;
-          thumbEmojiDispNew.textContent = emoji;
-          thumbEmojiBtnNew.textContent = emoji;
-          thumbEmojiClearNew.style.display = 'inline-flex';
-          thumbIn.value = '';
-          thumbEmojiPickerNew.classList.remove('is-open');
-        });
-        thumbEmojiPickerNew.appendChild(span);
+      var thumbEmojiPickerNew = createEmojiPickerDropdown(function (emoji) {
+        thumbEmojiInputNew.value = emoji;
+        thumbEmojiDispNew.textContent = emoji;
+        thumbEmojiBtnNew.textContent = emoji;
+        thumbEmojiClearNew.style.display = 'inline-flex';
+        thumbIn.value = '';
+        thumbEmojiPickerNew.classList.remove('is-open');
       });
       thumbEmojiBtnNew.addEventListener('click', function () {
         thumbEmojiPickerNew.classList.toggle('is-open');
+        if (thumbEmojiPickerNew.classList.contains('is-open')) {
+          var searchEl = thumbEmojiPickerNew.querySelector('.emoji-picker-search');
+          if (searchEl) { searchEl.value = ''; searchEl.dispatchEvent(new Event('input')); searchEl.focus(); }
+        }
       });
       document.addEventListener('click', function closeAssetPickerNew(e) {
         if (thumbEmojiPickerNew.classList.contains('is-open') && !thumbEmojiPickerNew.contains(e.target) && e.target !== thumbEmojiBtnNew) {

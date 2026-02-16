@@ -60,7 +60,29 @@
     {
       "type": "link",
       "label": "Videos",
-      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg"
+      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg",
+      "thumbnailEmoji": "🔮"
+    },
+    {
+      "type": "page",
+      "label": "Alien Tree House VR",
+      "items": [
+        {
+          "type": "link",
+          "label": "Trailer",
+          "url": "https://x.com/AlienTreeHouse/status/1367638444210585604"
+        },
+        {
+          "type": "link",
+          "label": "VR Chat Link",
+          "url": "https://vrchat.com/home/launch?worldId=wrld_97e22e35-6815-49b1-9daf-c731cd6b163b"
+        },
+        {
+          "type": "link",
+          "label": "Alien Tree House Telegram Group",
+          "url": "https://t.me/alientreehouse"
+        }
+      ]
     }
   ]
 }
