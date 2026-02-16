@@ -797,6 +797,10 @@
     jsonOutput.value = JSON.stringify(state, null, 2);
   }
 
+  gardenTitle.addEventListener('input', updateJson);
+  gardenDescription.addEventListener('input', updateJson);
+  gardenImage.addEventListener('input', updateJson);
+
   addLinkBtn.addEventListener('click', function () {
     addingMode = 'link';
     addingParentItems = state.items;
@@ -812,6 +816,7 @@
   });
 
   copyBtn.addEventListener('click', function () {
+    updateJson();
     jsonOutput.select();
     document.execCommand('copy');
     copyBtn.textContent = 'Copied!';
@@ -819,6 +824,7 @@
   });
 
   downloadBtn.addEventListener('click', function () {
+    updateJson();
     const blob = new Blob([jsonOutput.value], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
