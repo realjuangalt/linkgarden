@@ -1,38 +1,38 @@
 {
-  "title": "My Link Garden",
-  "description": "A place to grow your links.",
-  "image": "",
+  "title": "Juan Galt",
+  "description": "Street Philosopher, Artist, Writer, Podcaster and Vibe Coder",
+  "image": "https://x.com/JuanSGalt/photo",
   "items": [
     {
       "type": "link",
-      "label": "GitHub",
-      "url": "https://github.com"
+      "label": "Bitcoin Magazine Articles",
+      "url": "https://bitcoinmagazine.com/authors/juan-galt"
+    },
+    {
+      "type": "link",
+      "label": "Twitter",
+      "url": "https://x.com/JuanSGalt"
+    },
+    {
+      "type": "link",
+      "label": "Videos",
+      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg"
     },
     {
       "type": "page",
-      "label": "Content",
+      "label": "Art",
       "items": [
         {
           "type": "link",
-          "label": "Articles",
-          "url": "https://example.com/articles"
-        },
-        {
-          "type": "link",
-          "label": "Videos",
-          "url": "https://youtube.com"
-        },
-        {
-          "type": "link",
-          "label": "Podcasts",
-          "url": "https://example.com/podcasts"
+          "label": "PEPETHUGLIFE",
+          "url": "http://pepethuglife.lol/"
         }
       ]
     },
     {
       "type": "link",
-      "label": "Twitter",
-      "url": "https://twitter.com"
+      "label": "Blog",
+      "url": "https://blog.juangalt.com"
     }
   ]
 }

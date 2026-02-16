@@ -1,0 +1,38 @@
+{
+  "title": "My Link Garden",
+  "description": "A place to grow your links.",
+  "image": "",
+  "items": [
+    {
+      "type": "link",
+      "label": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "type": "page",
+      "label": "Content",
+      "items": [
+        {
+          "type": "link",
+          "label": "Articles",
+          "url": "https://example.com/articles"
+        },
+        {
+          "type": "link",
+          "label": "Videos",
+          "url": "https://youtube.com"
+        },
+        {
+          "type": "link",
+          "label": "Podcasts",
+          "url": "https://example.com/podcasts"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "label": "Twitter",
+      "url": "https://twitter.com"
+    }
+  ]
+}
