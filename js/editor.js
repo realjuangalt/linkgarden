@@ -33,7 +33,7 @@
     '🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘','🌛','🌜','🌟','🪐','☀️','🌞','🌍','👽','👾','🤖','🛸','🌌','🔭'
   ];
 
-  /** Keywords for emoji search (partial; unlisted emojis match by character only). */
+  /** Keywords for emoji search (overrides EMOJI_SEARCH_TERMS when set). */
   const EMOJI_KEYWORDS = {
     '₿': 'bitcoin btc satoshi orange coin',
     '💰': 'money bag cash rich',
@@ -92,6 +92,9 @@
     '🐸': 'frog pepe'
   };
 
+  /** Search terms for every emoji (same order as EMOJI_LIST). Used when EMOJI_KEYWORDS has no entry. */
+  const EMOJI_SEARCH_TERMS = "grinning smile happy|grin big eyes smile|grin smiling eyes|beaming smile|grinning sweat|tears joy laugh|rofl rolling floor|slight smile|upside down face|wink|blush smile|halo angel|smiling hearts love|heart eyes love|star struck|kiss blowing|yummy savoring food|tongue winking|zany silly|cool sunglasses|thinking face|eye roll|smirk|grimace|lying pinocchio|relieved|silent face without mouth|neutral face|expressionless|hushed|frowning open mouth|anguished|open mouth|astonished|flushed|pleading puppy|cry tear|sob crying|triumph steam|angry|rage angry|curse symbols mouth|devil smile horns|skull dead|poop pile|thumbs up like|thumbs down|clap applause|raising hands|wave hand|handshake deal|pray please|victory peace|cross fingers luck|love you gesture|rock horns|point left|point right|point up|point down|heart red love|orange heart|yellow heart|green heart|blue heart|purple heart|black heart|white heart|broken heart|two hearts|sparkling heart|growing heart|cupid arrow|star|sparkles shine|fire flame hot|hundred points|dart target|trophy winner|pushpin pin|art palette|movie film clapper|newspaper|music note|notes music|microphone mic|mic karaoke|phone mobile|laptop computer|desktop computer|camera|camera flash|link|paperclip|book open|memo note|pencil|lock|key|light bulb|megaphone|bell|seedling plant grow|herb leaf|clover lucky|blossom flower|flower|sunflower|flower blossom|maple leaf|frog|arrow right|arrow left|arrow up|arrow down|northeast|southeast|check mark|cross mark|lightning bolt|megaphone loud|speech balloon|anger symbol|thought balloon|clock time|calendar date|calendar spiral|check button|ok button|cool button|new button|free button|top button|back button|on button|soon button|vertical arrows|arrows clockwise|fast forward|rewind|shuffle|repeat|repeat one|dollar money|b button|o button|parking|japanese discount|japanese free|japanese applicable|japanese monthly|japanese application|japanese open|japanese bargain|japanese acceptable|copyright|registered|trademark|gear settings|wrench|hammer tool|nut bolt|pick mining|screwdriver|ruler triangle|ruler|scissors|file box|file cabinet|trash|lock|unlock|lock pen|lock key|key|hammer|axe|pick|shield|pistol gun|bow arrow|boomerang|shield|crystal ball|magic wand|prayer beads|nazar|barber pole|alembic|telescope|microscope|hole|xray|bandage|stethoscope|pill medicine|syringe|blood drop|dna|virus|petri dish|test tube|thermometer|broom|plunger|basket|tissue|toilet|tap water|shower|bathtub|bath|soap|toothbrush|razor|sponge|bucket|lotion|bellhop bell|key|door|chair|couch|bed|teddy bear|nesting doll|frame picture|mirror|window|shopping bags|cart shopping|gift present|balloon|carp streamer|ribbon|magic wand|piñata|confetti|party|lantern|wind chime|red envelope|envelope letter|inbox|outbox|email|love letter|inbox tray|outbox tray|package|mouse trap|mailbox|mailbox full|postbox|scroll|page|document|bookmark tabs|receipt|chart|chart up|chart down|notebook|calendar|date|trash|file|file folder|folder|newspaper|notebook|ledger|books|book|bookmark|safety pin|link|paperclips|ruler|ruler|abacus|pushpin|round pushpin|scissors|pen|fountain pen|black nib|paintbrush|crayon|memo note|briefcase|file cabinet|folder|folder|file box|ballot box|file cabinet|pencil edit|lock|unlock|bitcoin crypto|money bag|coin gold|diamond gem|rocket space|moon crescent|bull market|bear market|brick block|card credit|bank|dollar|yen|euro|pound|crab|house home|orange circle|heart orange|symbol icon 319|symbol icon 320|symbol icon 321|symbol icon 322|symbol icon 323|symbol icon 324|symbol icon 325|symbol icon 326|symbol icon 327|symbol icon 328|symbol icon 329|symbol icon 330|symbol icon 331|symbol icon 332|symbol icon 333|symbol icon 334|symbol icon 335|symbol icon 336|symbol icon 337|symbol icon 338|symbol icon 339|symbol icon 340|symbol icon 341|symbol icon 342|symbol icon 343|symbol icon 344|symbol icon 345|symbol icon 346|symbol icon 347|symbol icon 348|symbol icon 349|symbol icon 350|symbol icon 351|symbol icon 352|symbol icon 353|symbol icon 354|symbol icon 355|symbol icon 356|symbol icon 357|symbol icon 358|symbol icon 359|symbol icon 360|symbol icon 361|symbol icon 362|symbol icon 363|symbol icon 364".split('|');
+
   /** Builds the dropdown DOM for the emoji picker (search + grid). Calls onSelect(emoji) when one is chosen. */
   function createEmojiPickerDropdown(onSelect) {
     var picker = document.createElement('div');
@@ -127,14 +130,14 @@
       if (e.key === 'Escape') searchInput.blur();
     });
 
-    EMOJI_LIST.forEach(function (emoji) {
+    EMOJI_LIST.forEach(function (emoji, i) {
       var span = document.createElement('button');
       span.type = 'button';
       span.className = 'emoji-picker-item';
       span.textContent = emoji;
       span.setAttribute('role', 'option');
       span.setAttribute('data-emoji', emoji);
-      var kw = EMOJI_KEYWORDS[emoji];
+      var kw = EMOJI_KEYWORDS[emoji] || (EMOJI_SEARCH_TERMS && EMOJI_SEARCH_TERMS[i]) || '';
       if (kw) span.setAttribute('data-keywords', kw);
       span.addEventListener('click', function () {
         onSelect(emoji);
