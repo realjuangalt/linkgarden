@@ -1,6 +1,6 @@
 # Link Garden
 
-A minimal Link Tree–style link-in-bio page you can host **for free** on GitHub Pages. No server or build step — just HTML, CSS, and JavaScript. Add your title, description, avatar, and links (or nested “pages” of links) and share one URL.
+A minimal Link list home page link-in-bio page you can host **for free** on GitHub Pages. No server or build step — just HTML, CSS, and JavaScript. Add your title, description, avatar, and links (or nested “pages” of links) and share one URL.
 
 ---
 
