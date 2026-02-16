@@ -58,12 +58,6 @@
       "thumbnailEmoji": "🐸"
     },
     {
-      "type": "link",
-      "label": "Videos",
-      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg",
-      "thumbnailEmoji": "🔮"
-    },
-    {
       "type": "page",
       "label": "Alien Tree House VR",
       "items": [
@@ -82,7 +76,14 @@
           "label": "Alien Tree House Telegram Group",
           "url": "https://t.me/alientreehouse"
         }
-      ]
+      ],
+      "thumbnailEmoji": "🛸"
+    },
+    {
+      "type": "link",
+      "label": "Videos",
+      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg",
+      "thumbnailEmoji": "🎬"
     }
   ]
 }
