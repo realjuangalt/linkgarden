@@ -16,7 +16,14 @@
     {
       "type": "page",
       "label": "Open Source Projects & Vibe Coding",
-      "items": [],
+      "items": [
+        {
+          "type": "link",
+          "label": "Link Garden",
+          "url": "https://github.com/realjuangalt/linkgarden/",
+          "thumbnailEmoji": "🍀"
+        }
+      ],
       "thumbnailEmoji": "💻"
     },
     {
@@ -37,22 +44,22 @@
         {
           "type": "link",
           "label": "SHADILAY THUG LIFE",
-          "url": "https://juangalt.com/p/shadilay-thug-life-augmented-reality"
+          "url": "https://blog.juangalt.com/p/shadilay-thug-life-augmented-reality"
         },
         {
           "type": "link",
           "label": "FAKEBTCLOL Trustless BTC to XCP peg.",
-          "url": "https://juangalt.com/p/fakebtclol-a-trustless-btc-to-xcp"
+          "url": "https://blog.juangalt.com/p/fakebtclol-a-trustless-btc-to-xcp"
         },
         {
           "type": "link",
           "label": "RarePepeWorld Explorer Open Sourced",
-          "url": "https://juangalt.com/p/announcing-rarepepeworldcom"
+          "url": "https://blog.juangalt.com/p/announcing-rarepepeworldcom"
         },
         {
           "type": "link",
           "label": "First Liquid Pepe",
-          "url": "https://juangalt.com/p/the-first-liquid-pepe"
+          "url": "https://blog.juangalt.com/p/the-first-liquid-pepe"
         }
       ],
       "thumbnailEmoji": "🐸"
