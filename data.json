@@ -14,9 +14,16 @@
       "url": "https://x.com/JuanSGalt"
     },
     {
+      "type": "page",
+      "label": "Open Source Projects & Vibe Coding",
+      "items": [],
+      "thumbnailEmoji": "💻"
+    },
+    {
       "type": "link",
-      "label": "Videos",
-      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg"
+      "label": "Blog",
+      "url": "https://blog.juangalt.com",
+      "thumbnailEmoji": "📝"
     },
     {
       "type": "page",
@@ -26,13 +33,34 @@
           "type": "link",
           "label": "PEPETHUGLIFE",
           "url": "http://pepethuglife.lol/"
+        },
+        {
+          "type": "link",
+          "label": "SHADILAY THUG LIFE",
+          "url": "https://juangalt.com/p/shadilay-thug-life-augmented-reality"
+        },
+        {
+          "type": "link",
+          "label": "FAKEBTCLOL Trustless BTC to XCP peg.",
+          "url": "https://juangalt.com/p/fakebtclol-a-trustless-btc-to-xcp"
+        },
+        {
+          "type": "link",
+          "label": "RarePepeWorld Explorer Open Sourced",
+          "url": "https://juangalt.com/p/announcing-rarepepeworldcom"
+        },
+        {
+          "type": "link",
+          "label": "First Liquid Pepe",
+          "url": "https://juangalt.com/p/the-first-liquid-pepe"
         }
-      ]
+      ],
+      "thumbnailEmoji": "🐸"
     },
     {
       "type": "link",
-      "label": "Blog",
-      "url": "https://blog.juangalt.com"
+      "label": "Videos",
+      "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg"
     }
   ]
 }

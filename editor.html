@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Link Garden — Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
     <header class="editor-header">
       <h1>Link Garden — Dashboard</h1>
       <div class="editor-actions">
+        <button type="button" class="btn btn-secondary" id="clear-content">Clear content</button>
         <a href="index.html" class="btn btn-primary">View Garden →</a>
       </div>
     </header>
@@ -34,7 +35,7 @@
       </div>
     </section>
 
-    <section class="editor-section">
+    <section class="editor-section editor-section-items">
       <h2>Links & pages</h2>
       <p class="load-hint">Add links (external URLs) or pages (nested sets of links). Reorder by editing the JSON below.</p>
       <div id="items-container"></div>
@@ -55,6 +56,7 @@
           Load from file <input type="file" id="load-json" accept=".json" hidden>
         </label>
       </div>
+      <div id="editor-message" class="editor-message error" role="alert" hidden></div>
     </section>
 
     <footer class="garden-footer" style="margin-top: 2rem;">

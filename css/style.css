@@ -14,6 +14,11 @@
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   --radius: 16px;
   --radius-sm: 10px;
+  /* Bitcoin orange – fruit in the garden */
+  --orange: #f7931a;
+  --orange-soft: rgba(247, 147, 26, 0.25);
+  --gold: #e9b84a;
+  --gold-soft: rgba(233, 184, 74, 0.15);
 }
 
 * {
@@ -28,7 +33,11 @@ body {
   color: var(--text);
   background-image:
     radial-gradient(ellipse 120% 80% at 50% -20%, rgba(61, 107, 61, 0.25), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(45, 74, 45, 0.5), transparent);
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(45, 74, 45, 0.5), transparent),
+    radial-gradient(ellipse 50% 30% at 20% 60%, var(--orange-soft), transparent),
+    radial-gradient(ellipse 40% 25% at 85% 20%, var(--gold-soft), transparent);
+  -webkit-tap-highlight-color: transparent;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 a {
@@ -45,7 +54,7 @@ a:hover {
 .garden {
   max-width: 420px;
   margin: 0 auto;
-  padding: 2rem 1rem 3rem;
+  padding: 1.5rem 1rem 3rem;
 }
 
 .garden-header {
@@ -59,6 +68,7 @@ a:hover {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--card-border);
+  box-shadow: 0 0 0 1px var(--orange-soft);
   margin-bottom: 1rem;
 }
 
@@ -67,6 +77,8 @@ a:hover {
   font-weight: 600;
   margin: 0 0 0.25rem;
   letter-spacing: 0.02em;
+  color: var(--petal);
+  text-shadow: 0 0 24px var(--gold-soft);
 }
 
 .garden-header .description {
@@ -78,18 +90,23 @@ a:hover {
 
 .garden-nav {
   margin-bottom: 1rem;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+}
+
+.garden-nav.is-subpage {
+  display: flex;
 }
 
 .garden-nav .back-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.75rem;
-  font-size: 0.85rem;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   background: transparent;
   border: 1px solid var(--card-border);
@@ -97,6 +114,7 @@ a:hover {
   cursor: pointer;
   font-family: inherit;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .garden-nav .back-btn:hover {
@@ -117,12 +135,14 @@ a:hover {
 }
 
 .garden-link {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding: 1rem 1.25rem;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   color: var(--text);
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -132,11 +152,42 @@ a:hover {
   transition: transform 0.15s, border-color 0.2s, background 0.2s;
   text-decoration: none;
   backdrop-filter: blur(8px);
+  gap: 0.75rem;
+}
+
+.garden-link .garden-link-thumb {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.garden-link .garden-link-thumb-favicon {
+  object-fit: contain;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.garden-link .garden-link-thumb-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.garden-link .garden-link-text {
+  flex: 1;
+  min-width: 0;
 }
 
 .garden-link:hover {
   border-color: var(--stem);
   background: rgba(61, 107, 61, 0.5);
+  box-shadow: 0 4px 20px var(--orange-soft);
   transform: translateY(-2px);
 }
 
@@ -160,17 +211,23 @@ a:hover {
 .garden-footer .edit-link {
   font-size: 0.85rem;
   color: var(--text-muted);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.1rem;
+  min-height: 44px;
+  box-sizing: border-box;
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 0.5rem;
   transition: color 0.2s, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .garden-footer .edit-link:hover {
-  color: var(--stem);
-  border-color: var(--stem);
+  color: var(--gold);
+  border-color: var(--orange);
+  box-shadow: 0 0 12px var(--orange-soft);
 }
 
 /* ----- Editor (dashboard) page ----- */
@@ -204,6 +261,7 @@ a:hover {
 
 .btn {
   padding: 0.6rem 1.1rem;
+  min-height: 44px;
   font-size: 0.9rem;
   font-family: inherit;
   font-weight: 500;
@@ -211,16 +269,21 @@ a:hover {
   cursor: pointer;
   border: none;
   transition: background 0.2s, transform 0.1s;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
-  background: var(--leaf-light);
+  background: linear-gradient(135deg, var(--leaf-light) 0%, var(--orange) 100%);
   color: var(--petal);
 }
 
 .btn-primary:hover {
-  background: var(--stem);
-  color: var(--soil);
+  background: linear-gradient(135deg, var(--stem) 0%, var(--gold) 100%);
+  color: var(--petal);
+  box-shadow: 0 4px 16px var(--orange-soft);
 }
 
 .btn-secondary {
@@ -253,11 +316,20 @@ a:hover {
   backdrop-filter: blur(8px);
 }
 
+/* Keep Links & pages section above JSON output so emoji picker isn’t hidden behind it */
+.editor-section-items,
+.editor-section:has(#items-container) {
+  position: relative;
+  z-index: 10;
+}
+
 .editor-section h2 {
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 1rem;
   color: var(--bloom);
+  border-left: 3px solid var(--orange);
+  padding-left: 0.5rem;
 }
 
 .form-row {
@@ -273,6 +345,90 @@ a:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.35rem;
+}
+
+.form-row .form-hint {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.9;
+  margin-bottom: 0.35rem;
+  margin-top: 0.15rem;
+}
+
+.label-input-with-emoji {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.label-input-with-emoji input {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn-emoji {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-emoji:hover {
+  border-color: var(--orange);
+  background: var(--gold-soft);
+}
+
+.emoji-picker {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.35rem;
+  width: 100%;
+  max-width: 280px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(26, 31, 26, 0.98);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.emoji-picker.is-open {
+  display: flex;
+}
+
+.emoji-picker-item {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.emoji-picker-item:hover {
+  background: var(--gold-soft);
+  transform: scale(1.1);
 }
 
 .form-row input,
@@ -334,6 +490,25 @@ a:hover {
   margin-left: 0;
 }
 
+.item-card .item-thumb-preview {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.item-card .item-thumb-preview-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
 .item-card .item-actions {
   display: flex;
   gap: 0.5rem;
@@ -343,6 +518,143 @@ a:hover {
 .item-card .item-actions .btn {
   padding: 0.4rem 0.75rem;
   font-size: 0.8rem;
+}
+
+.item-card .item-actions .btn-order {
+  min-width: 2.25rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.item-card .item-view {
+  display: block;
+}
+
+.item-card.is-editing .item-view {
+  display: none;
+}
+
+.item-card .item-edit-form {
+  display: none;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.item-card.is-editing .item-edit-form {
+  display: block;
+}
+
+.item-edit-form .form-row,
+.new-item-form .form-row {
+  margin-bottom: 0.75rem;
+}
+
+.item-edit-form .form-row label,
+.new-item-form .form-row label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.item-edit-form .form-row input,
+.new-item-form .form-row input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+}
+
+.item-edit-form .form-actions,
+.new-item-form .form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.new-item-form {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px dashed var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.new-item-form h3 {
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+
+.thumb-input-wrap {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.thumb-input-wrap input {
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-fetch-preview {
+  flex-shrink: 0;
+}
+
+.form-row-thumb .thumb-input-wrap input {
+  width: auto;
+}
+
+.thumb-emoji-wrap {
+  margin-top: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.thumb-emoji-wrap .form-hint {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.thumb-emoji-display {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.btn-emoji-asset {
+  min-width: 44px;
+  font-size: 1.25rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.emoji-picker-asset {
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  z-index: 1000;
+}
+
+.editor-message {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.editor-message.error {
+  background: rgba(180, 80, 80, 0.2);
+  border: 1px solid rgba(200, 100, 100, 0.4);
+  color: #f5c8c8;
 }
 
 .nested-items {
@@ -377,15 +689,60 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-/* Responsive */
+/* ----- Thumbnails on link cards ----- */
+.garden-link.has-thumb .garden-link-text {
+  text-align: left;
+}
+
+.garden-link:not(.has-thumb) {
+  justify-content: center;
+}
+
+.garden-link:not(.has-thumb) .garden-link-text {
+  text-align: center;
+}
+
+/* Responsive / mobile-first */
 @media (max-width: 480px) {
-  .garden, .editor-wrap {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .garden {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .garden-header .avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .garden-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .garden-link {
+    min-height: 52px;
+    padding: 0.6rem 0.85rem;
+  }
+
+  .garden-link .garden-link-thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .editor-wrap {
+    padding: 1rem 0.75rem 2rem;
   }
 
   .editor-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .item-card .item-actions .btn {
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 481px) {
+  .garden-link:active {
+    transform: none;
   }
 }

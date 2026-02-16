@@ -11,6 +11,7 @@
     {
       "type": "page",
       "label": "Content",
+      "thumbnailEmoji": "📂",
       "items": [
         {
           "type": "link",
@@ -32,7 +33,8 @@
     {
       "type": "link",
       "label": "Twitter",
-      "url": "https://twitter.com"
+      "url": "https://twitter.com",
+      "thumbnailEmoji": "🐦"
     }
   ]
 }
