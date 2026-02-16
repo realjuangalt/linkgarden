@@ -1,5 +1,4 @@
 (function () {
-  const garden = document.getElementById('garden');
   const titleEl = document.getElementById('title');
   const descriptionEl = document.getElementById('description');
   const avatarEl = document.getElementById('avatar');
@@ -11,6 +10,16 @@
   let data = null;
   let path = []; // stack of page indices: [1] = first page at root, [1, 0] = first item of that page
 
+  /** Convert X/Twitter profile URLs to a direct avatar image URL so <img> can load it. */
+  function avatarImageUrl(url) {
+    if (!url || !url.trim()) return url;
+    var match = url.match(/(?:x\.com|twitter\.com)\/([^\/\?]+)/i);
+    if (match) {
+      return 'https://unavatar.io/twitter/' + encodeURIComponent(match[1]);
+    }
+    return url;
+  }
+
   function getCurrentItems() {
     if (!data || !data.items) return null;
     let items = data.items;
@@ -20,19 +29,6 @@
       items = items[idx].items || [];
     }
     return items;
-  }
-
-  function getCurrentPageLabel() {
-    if (path.length === 0) return null;
-    let items = data.items;
-    let label = null;
-    for (let i = 0; i < path.length; i++) {
-      const idx = path[i];
-      if (!items[idx]) break;
-      label = items[idx].label;
-      if (items[idx].type === 'page') items = items[idx].items || [];
-    }
-    return label;
   }
 
   function getBreadcrumbLabels() {
@@ -49,7 +45,6 @@
 
   function render() {
     const items = getCurrentItems();
-    const isRoot = path.length === 0;
 
     titleEl.textContent = data.title || 'Link Garden';
     if (data.description) {
@@ -59,14 +54,14 @@
       descriptionEl.hidden = true;
     }
     if (data.image) {
-      avatarEl.src = data.image;
+      avatarEl.src = avatarImageUrl(data.image);
       avatarEl.alt = data.title || 'Avatar';
       avatarEl.hidden = false;
     } else {
       avatarEl.hidden = true;
     }
 
-    if (isRoot) {
+    if (path.length === 0) {
       navEl.hidden = true;
     } else {
       navEl.hidden = false;
