@@ -4,6 +4,11 @@ A minimal link list home page link-in-bio page you can host **for free** on GitH
 
 ---
 
+> **GitHub repo description:** On the repo page, click the gear next to **About** and use:  
+> `Minimal link-in-bio page for GitHub Pages. No server, no build—just HTML, CSS, and JS. (MIT)`
+
+**Note:** The sample content in `data.json` (title, description, links) is the maintainer’s own. Replace it with your own content when you use Link Garden.
+
 ## How to use this page
 
 ### Viewing your garden
@@ -150,3 +155,8 @@ Docs:
 | `css/style.css` | Styles for garden and editor. |
 | `js/garden.js` | Garden logic (loads `data.json`, renders links and pages). |
 | `js/editor.js` | Editor logic (forms, JSON output, copy/download). |
+| `LICENSE` | MIT License. |
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for full text.
