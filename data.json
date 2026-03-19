@@ -96,6 +96,29 @@
       "label": "Videos",
       "url": "https://www.youtube.com/channel/UCDkDNKQ2AHAe-Ic65bTsAYg",
       "thumbnailEmoji": "🎬"
+    },
+    {
+      "type": "page",
+      "label": "Speeches",
+      "items": [
+        {
+          "type": "page",
+          "label": "English",
+          "items": []
+        },
+        {
+          "type": "page",
+          "label": "Spanish",
+          "items": [
+            {
+              "type": "link",
+              "label": "Rol e Historia de los Mantenedores | Plan ₿ El Salvador",
+              "url": "https://rumble.com/v75x41q-rol-e-historia-de-los-mantenedores-plan-el-salvador.html",
+              "thumbnailEmoji": "🎙"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
