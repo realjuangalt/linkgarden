@@ -104,7 +104,26 @@
         {
           "type": "page",
           "label": "English",
-          "items": []
+          "items": [
+            {
+              "type": "link",
+              "label": "A Cypherpunk Future - Monerotopia 2024 by Juan Galt",
+              "url": "https://www.youtube.com/watch?v=u1y0j2ncXLc",
+              "thumbnail": "https://img.youtube.com/vi/u1y0j2ncXLc/maxresdefault.jpg"
+            },
+            {
+              "type": "link",
+              "label": "The Top 5 Mistakes Of Bitcoin Self Custody - Adopting Bitcoin 2023",
+              "url": "https://www.youtube.com/watch?v=xKaE4t1agaU",
+              "thumbnail": "https://img.youtube.com/vi/xKaE4t1agaU/maxresdefault.jpg"
+            },
+            {
+              "type": "link",
+              "label": "Security And Inheritance In The Digital Age - Juan Galt",
+              "url": "https://www.youtube.com/watch?v=ii6eaZU1bHc&t=1442s",
+              "thumbnail": "https://img.youtube.com/vi/ii6eaZU1bHc/sddefault.jpg"
+            }
+          ]
         },
         {
           "type": "page",
@@ -114,6 +133,18 @@
               "type": "link",
               "label": "Rol e Historia de los Mantenedores | Plan ₿ El Salvador",
               "url": "https://rumble.com/v75x41q-rol-e-historia-de-los-mantenedores-plan-el-salvador.html",
+              "thumbnailEmoji": "🎙"
+            },
+            {
+              "type": "link",
+              "label": "Bitcoin, Su Valor, Y Como Integrar Con Wordpress - Guadalajara",
+              "url": "https://www.youtube.com/watch?v=lsOtIHUG8CY",
+              "thumbnail": "https://img.youtube.com/vi/lsOtIHUG8CY/maxresdefault.jpg"
+            },
+            {
+              "type": "link",
+              "label": "Los Lideres de Cheran descubren el Bitcoin - Anarchapulco 2018",
+              "url": "https://www.youtube.com/watch?v=78smMCjxw2A&t=298s",
               "thumbnailEmoji": "🎙"
             }
           ]
